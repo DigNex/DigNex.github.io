@@ -13,14 +13,11 @@
         :root {
             --gold: #B8952A;
             --gold-light: #D4AE4A;
-            --gold-pale: #F5EDD0;
             --navy: #0D1B2A;
             --navy-mid: #162437;
             --cream: #FAF7F2;
             --white: #FFFFFF;
             --text-mid: #3D5166;
-            --text-muted: #7A8FA3;
-            --radius: 14px;
             --radius-lg: 22px;
         }
 
@@ -39,35 +36,16 @@
             padding: 0 2rem;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             position: sticky;
             top: 0;
             z-index: 100;
             border-bottom: 1px solid rgba(184,149,42,0.2);
             box-shadow: 0 2px 12px rgba(0,0,0,0.04);
         }
-        .top-bar-logo { height: 55px; width: auto; }
-        .lang-bar {
-            display: flex;
-            gap: 8px;
-            direction: ltr;
-        }
-        .lang-btn {
-            background: none;
-            border: 1px solid rgba(0,0,0,0.15);
-            color: rgba(0,0,0,0.55);
-            padding: 5px 16px;
-            border-radius: 20px;
-            font-family: 'Cairo', sans-serif;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .lang-btn.active {
-            background: var(--navy);
-            border-color: var(--navy);
-            color: #FFFFFF;
-            font-weight: 700;
+        .top-bar-logo {
+            height: 55px;
+            width: auto;
         }
 
         /* ─── HERO ─── */
@@ -139,6 +117,12 @@
             border: none;
             margin: 0;
         }
+        .section-divider {
+            height: 1px;
+            background: rgba(184,149,42,0.2);
+            border: none;
+            margin: 0;
+        }
 
         /* ─── SECTIONS ─── */
         section { padding: 80px 2rem; }
@@ -188,11 +172,13 @@
             box-shadow: 0 12px 36px rgba(0,0,0,0.06);
         }
         .service-icon {
-            width: 56px; height: 56px;
+            width: 56px;
+            height: 56px;
             margin: 0 auto 18px;
         }
         .service-icon img {
-            width: 100%; height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
         .service-card h3 {
@@ -239,38 +225,33 @@
         .why-card h3 { font-size: 1rem; font-weight: 700; color: var(--gold-light); margin-bottom: 8px; }
         .why-card p { font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
 
-        /* ─── TAMARA ─── */
-        .tamara-section { background: var(--cream); padding: 40px 2rem 80px; }
-        .tamara-card {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--white);
-            border-radius: 24px;
-            padding: 32px 36px;
-            box-shadow: 0 4px 32px rgba(0,0,0,0.03);
-            border: 1px solid rgba(150,1,241,0.12);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 16px;
-        }
-        .tamara-logo { height: 28px; width: auto; }
-        .tamara-divider { width: 50px; height: 1px; background: rgba(150,1,241,0.2); }
-        .tamara-text { font-size: 1rem; font-weight: 600; color: #212442; }
-        .tamara-text span { color: #9601F1; font-weight: 800; }
-
         /* ─── FOOTER ─── */
         footer {
-            background: var(--navy-mid);
+            background: #ffffff;
             text-align: center;
             padding: 40px 2rem;
-            color: rgba(255,255,255,0.5);
+            border-top: 1px solid rgba(184,149,42,0.2);
         }
-        .footer-logo { height: 40px; width: auto; margin-bottom: 16px; }
-        .footer-contact { font-size: 0.9rem; margin-bottom: 8px; }
-        .footer-contact a { color: var(--gold-light); text-decoration: none; }
-        .footer-rights { font-size: 0.75rem; color: rgba(255,255,255,0.25); margin-top: 16px; }
+        .footer-logo {
+            height: 50px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+        .footer-contact {
+            font-size: 0.95rem;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        .footer-contact a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-rights {
+            font-size: 0.8rem;
+            color: var(--text-mid);
+            margin-top: 20px;
+        }
 
         /* ─── SCROLL TO TOP ─── */
         .scroll-to-top {
@@ -302,11 +283,7 @@
 
 <!-- الشريط العلوي -->
 <div class="top-bar">
-    <a href="/"><img class="top-bar-logo" src="img/Logo.png" alt="Digital Nexus"></a>
-    <div class="lang-bar">
-        <button class="lang-btn" id="btn-en">English</button>
-        <button class="lang-btn active" id="btn-ar">العربية</button>
-    </div>
+    <a href="/"><img class="top-bar-logo" src="img/Logo.png" alt="Digital Nexus Logo"></a>
 </div>
 
 <!-- HERO -->
@@ -357,6 +334,8 @@
     </div>
 </section>
 
+<hr class="section-divider">
+
 <!-- لماذا تختارنا -->
 <section class="why-bg">
     <div class="container text-center">
@@ -388,10 +367,9 @@
     </div>
 </section>
 
-<!-- تمارا -->
-
+<!-- التذييل -->
 <footer>
-    <img src="img/Logo.png" alt="Digital Nexus" class="footer-logo">
+    <img src="img/Logo.png" alt="Digital Nexus Logo" class="footer-logo">
     <p class="footer-contact">
         واتساب: <a href="https://wa.me/966531167761" target="_blank" rel="noopener">0531167761</a>
     </p>
@@ -400,14 +378,11 @@
     </p>
     <p class="footer-rights">© 2026 Digital Nexus — جميع الحقوق محفوظة</p>
 </footer>
-<!-- التذييل -->
-
 
 <!-- زر العودة للأعلى -->
 <button class="scroll-to-top" id="scrollToTopBtn" aria-label="الرجوع لأعلى">↑</button>
 
 <script>
-    // زر العودة للأعلى
     const scrollBtn = document.getElementById('scrollToTopBtn');
     window.addEventListener('scroll', () => {
         scrollBtn.classList.toggle('show', window.scrollY > 300);
